@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" th:href="@{/css/updatePage.css}" />
+
+    <title>updatePage</title>
+</head>
+<body>
+    <form th:object="${student}" th:action="@{/admin/updateStudent}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>
+            <input type="text" th:field="*{firstName}" />
+        </label>
+        <span th:if="${#fields.hasErrors('firstName')}"
+            th:errors="*{firstName}"
+            th:class="firstNameError"></span>
+        <label>
+            <input type="text" th:field="*{lastName}" />
+        </label>
+        <span th:if="${#fields.hasErrors('lastName')}"
+              th:errors="*{lastName}"
+              th:class="lastName"></span>
+        <button type="submit" class="btn">Update</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>adminPage</title>
+    <link rel="stylesheet" th:href="@{/css/adminPage.css}">
+</head>
+<body>
+
+<div class="card">
+    <form th:action="@{/admin/logout}" method="post">
+        <button type="submit" class="btn btn-primary" value="Logout">Logout</button>
+    </form>
+    <br><br>
+    <div class="brand">
+        <div class="logo">AD</div>
+        <div>
+            <h2>Admin Dashboard</h2>
+            <div class="muted">Manage students</div>
+        </div>
+    </div>
+    <br><br>
+    <form th:action="@{/admin/additionForm}" method="get">
+        <button type="submit" class="btn">Add</button>
+    </form>
+    <table class="students-table" th:if="${students != null}">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${students}">
+            <!-- data cells -->
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.firstName}"></td>
+            <td th:text="${student.lastName}"></td>
+            <td>
+                <div class="student-row-actions">
+                    <form th:action="@{/admin/deleteStudent}" method="get">
+                        <input type="hidden" name="id" th:value="${student.id}"/>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    <form th:action="@{/admin/updateForm}" method="get">
+                        <input type="hidden" name="id" th:value="${student.id}"/>
+                        <button type="submit" class="btn">Update</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div th:if="${students == null}" class="muted">No students available</div>
+</div>
+</body>
+</html>

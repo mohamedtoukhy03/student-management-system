@@ -1,0 +1,142 @@
+:root {
+    --bg-1: #0f172a;
+    --bg-2: #061025;
+    --accent: #6ee7b7;
+    --accent-2: #60a5fa;
+    --muted: #9aa4b2;
+    --radius: 12px;
+    --shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: #e6eef8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+}
+
+.card {
+    width: 100%;
+    max-width: 980px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #05233a;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 0 0 8px;
+    color: #dbeafe;
+    font-size: 20px;
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.students-table thead th {
+    text-align: left;
+    padding: 10px 12px;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.students-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    vertical-align: middle;
+}
+
+.student-row-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    appearance: none;
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #05233a;
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #ef4444, #fb7185);
+    color: white;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 6px 18px rgba(239, 68, 68, 0.06);
+}
+
+.error-text {
+    color: #ffb4b4;
+    font-size: 13px;
+    text-align: left;
+    margin-top: 6px;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .card {
+        padding: 14px;
+    }
+
+    .students-table thead {
+        display: none;
+    }
+
+    .students-table tbody td {
+        display: block;
+        padding: 10px 0;
+    }
+}
