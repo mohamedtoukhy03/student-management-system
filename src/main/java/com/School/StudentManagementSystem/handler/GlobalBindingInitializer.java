@@ -1,4 +1,4 @@
-package com.School.StudentManagementSystem.advice;
+package com.School.StudentManagementSystem.handler;
 
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.web.bind.WebDataBinder;

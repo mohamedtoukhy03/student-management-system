@@ -1,6 +1,6 @@
 package com.School.StudentManagementSystem.service;
 
-import com.School.StudentManagementSystem.dao.StudentRepository;
+import com.School.StudentManagementSystem.repository.StudentRepository;
 import com.School.StudentManagementSystem.entity.Student;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.School.StudentManagementSystem.service;
 
-import com.School.StudentManagementSystem.dao.AdminRepository;
+import com.School.StudentManagementSystem.repository.AdminRepository;
 import com.School.StudentManagementSystem.entity.Admin;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

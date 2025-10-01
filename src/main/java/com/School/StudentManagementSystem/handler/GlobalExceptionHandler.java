@@ -1,4 +1,4 @@
-package com.School.StudentManagementSystem.advice;
+package com.School.StudentManagementSystem.handler;
 
 import com.School.StudentManagementSystem.exception.EntityErrorResponse;
 import com.School.StudentManagementSystem.exception.EntityNotFoundException;

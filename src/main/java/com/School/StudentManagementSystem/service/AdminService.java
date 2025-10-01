@@ -1,11 +1,9 @@
 package com.School.StudentManagementSystem.service;
 
-import com.School.StudentManagementSystem.dao.AdminRepository;
+import com.School.StudentManagementSystem.repository.AdminRepository;
 import com.School.StudentManagementSystem.entity.Admin;
-import com.School.StudentManagementSystem.entity.Student;
 import jakarta.persistence.EntityNotFoundException;
 
-import java.util.List;
 import java.util.Optional;
 
 public class AdminService {

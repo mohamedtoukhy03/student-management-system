@@ -1,4 +1,4 @@
-package com.School.StudentManagementSystem.dao;
+package com.School.StudentManagementSystem.repository;
 
 import com.School.StudentManagementSystem.entity.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
