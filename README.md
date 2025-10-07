@@ -1,6 +1,6 @@
-# 🎓 Student Management System
+# 🎓 Student Crud Dashboard
 
-> A full-featured **Admin Panel** for managing students — includes CRUD operations, admin authentication (login/logout), and a clean responsive UI built with Spring Boot.
+> A robust Spring Boot Admin Dashboard providing authenticated access to full CRUD operations on student entities, built with Spring Security, Thymeleaf, and PostgreSQL.
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/your-username/StudentManagementSystem)
 ![Java](https://img.shields.io/badge/java-17-blue)
